@@ -1,20 +1,13 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
+    <ion-title class="ion-text-center">
+      Planetary Bodies
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-img src="https://cdn.eso.org/images/screen/eso1528c.jpg" style="object-fit: cover"></ion-img>
+  <ion-button class="ion-margin" expand="full" fill="outline" color="dark" [routerLink]="['/all-bodies']">All Planetary Bodies</ion-button>
+  <ion-button class="ion-margin" expand="full" fill="outline" color="warning" [routerLink]="['/favourites']">Your Favourites</ion-button>
 </ion-content>

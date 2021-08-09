@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Your Favourites</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="ion-padding-horizontal">
+    <ion-list>
+      <ion-item *ngFor="let favourite of favourites" class="ion-no-padding" (click)="chooseBody(favourite.id)">
+        <ion-label>
+        <ion-text style="font-size: small;"><p>{{favourite.englishName}}</p></ion-text>
+        <p>{{favourite.name}}</p>
+      </ion-label>
+      <ion-button expand="full" shape="round" fill="outline" color="danger" (click)="deleteFavourite(favourite)">Delete</ion-button>
+      </ion-item>
+    </ion-list>
+  </ion-grid>
+</ion-content>

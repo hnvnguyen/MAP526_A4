@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">
+      All Planetary Bodies
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-margin">
+  <ion-button expand="full" size="small" [routerLink]="['/']" class="ion-padding-horizontal">Main Page</ion-button>
+  <ion-text color="warning">
+    <p class="ion-text-center">All planetary bodies in our Solar System!</p>
+  </ion-text>
+
+  <ion-grid class="ion-padding-horizontal">
+    <ion-list>
+      <ion-item *ngFor="let top of bodies" class="ion-no-padding" (click)="chooseBody(top.id)">
+        <ion-label>
+        <ion-text style="font-size: small;"><p>{{top.englishName}}</p></ion-text>
+        <p>{{top.name}}</p>
+      </ion-label>
+      <p *ngIf="top.favourite"><ion-icon name="star" color="warning"></ion-icon></p>
+      </ion-item>
+    </ion-list>
+  </ion-grid>
+</ion-content>

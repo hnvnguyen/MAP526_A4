@@ -1,4 +1,9 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
+import { BodiesData } from '../data.model';
+import { DataService } from '../data.service';
+import { StorageService } from '../storage.service';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +12,8 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private storageService: StorageService) {}
 
+  ngOnInit() : void {
+  }
 }

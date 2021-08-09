@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { EachBodyPage } from './each-body/each-body.page';
 
 const routes: Routes = [
   {
@@ -11,6 +12,17 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'all-bodies',
+    loadChildren: () => import('./all-bodies/all-bodies.module').then( m => m.AllBodiesPageModule)
+  },
+  {
+    path: 'each-body/:id', component: EachBodyPage
+  },
+  {
+    path: 'favourites',
+    loadChildren: () => import('./favourites/favourites.module').then( m => m.FavouritesPageModule)
+  }
 ];
 
 @NgModule({

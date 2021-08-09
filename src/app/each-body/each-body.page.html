@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center" color="success">
+      {{body.name}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-margin">
+  <ion-text>
+    <p class="ion-margin">Scientific name: {{body.englishName}}</p>
+    <p class="ion-margin">Semi major axis: {{body.semimajorAxis}} km</p>
+    <p class="ion-margin">Gravity: {{body.gravity}} m/s2</p>
+    <p class="ion-margin">Density: {{body.density}} g/cm3</p>
+    <p class="ion-margin">Discovery date: {{body.discoveryDate}}</p>
+    <p class="ion-margin">Discovered by: {{body.discoveredBy}}</p>
+  </ion-text>
+  <ion-button expand="full" size="small" class="ion-padding-horizontal" color="success" (click)="addFavourites()">Add to favourites</ion-button>
+</ion-content>
